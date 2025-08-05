@@ -2,7 +2,7 @@
   "name": "magic-patterns-vite-template",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "npx vite",
     "build": "npx vite build",
@@ -11,17 +11,19 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-  "src/**/*.{js,jsx,ts,tsx}": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-},
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "lucide-react": "^0.441.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
     "@types/node": "^20.11.18",
     "@types/react": "^18.3.1",
